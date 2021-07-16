@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  background-color: darkorange;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  background: url(img/logo.png) no-repeat;
+  background-size: 33px;
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin: 8px 5px 0 0;
+  background-color: darkorange;
+  box-shadow: 0px 0px 0px 1px #eee, 
+              0px 0px 0px 2px #111, 
+              0px 0px 0px 3px darkorange;
+}
+
+pre {
+  text-align: left;
+  width: 900px;
+  background-color:#111;
+  overflow:auto;
+  margin:0 auto 1em;
+  padding:.5em 1em;
+  border-radius: 5px;
+}
+
+pre code,
+pre .line-number {
+  /* Ukuran line-height antara teks di dalam tag <code> dan <span class="line-number"> harus sama! */
+  font:normal normal 12px/14px "Courier New",Courier,Monospace;
+  color: #eee;
+  display:block;
+}
+
+pre .line-number {
+  float:left;
+  margin:0 1em 0 -1em;
+  border-right:1px solid;
+  text-align:right;
+}
+
+pre .line-number span {
+  display:block;
+  padding:0 .5em 0 1em;
+}
+
+pre .cl {
+  display:block;
+  clear:both;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.sidenav a:active{
+  background-color: darkorange;
+}
+
+.sidenav h1{
+  padding: 16px;
+  color: darkorange;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 0px 0px 0px 1px #eee, 
+  0px 0px 0px 2px #111, 
+  0px 0px 0px 3px darkorange;
+}
+
+.sidenav a:hover {
+  background-color: darkorange;
+  color: black;
+}
+
+.content {
+  margin-top: 0;
+  width: 1170px;
+  height: 640px;
+  margin-left: 200px;
+  padding-left: 20px;
+  text-align: center;
+  overflow: auto;
+
+}
+
+.content h2{
+  padding: 16px;
+}
+
+.content p{
+  padding: 16px 100px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+p.besar::first-letter {
+  font-size: 80px; 
+  float: left; 
+  line-height: 60px;
+  margin: 5px;
+}
+
+.item {
+  display: inline-block;
+  width: 480px;
+  height: 180px;
+  background-color: darkorange;
+  border-radius: 10px;
+  border: 3px solid #111;
+  color: #111;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  counter-reset: line;
+
+}
+
+.item p{
+  padding: 5px;
+  text-align: justify;
+}
+
+
+.item h3{
+  margin: 12px auto 7px;
+}
+
+.item .readmore {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  top: 140px;
+  color: #eee;
+  background-color: #111;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.item .tutup {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #eee;
+  background-color: #111;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  border-bottom-left-radius: 5px;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+  display: none;
+}
+
+​
+
+.kotak {
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  z-index: 1;
+}
+
+.kotak .modal {
+  background-color: #eee;
+  position: fixed;
+  top: 100px;
+  bottom: 100px;
+  left: 310px;
+  right: 100px;
+  display: inherit;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.kotak .close{
+  height: 30px;
+  width: 30px;
+  background-color: #111;
+  border-radius: 50%;
+  border: 5px solid #eee;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  cursor: pointer;
+}
+
+.close span{
+  color: #eee;
+  position: absolute;
+  left: 6px;
+}
+
+#game{
+  position: relative;
+}
+
+.area-com {
+  width: 300px;
+  height: 300px;
+  margin: 5px auto;
+  background-color: darkorange;
+  border-radius: 40px  0  0 40px;
+  border: 5px solid #111;
+  display: inline-block;
+}
+
+.area-player {
+  width: 300px;
+  height: 300px;
+  margin: 5px auto;
+  background-color: darkorange;
+  border-radius: 0 40px 40px 0;
+  border: 5px solid #111;
+  display: inline-block;
+}
+
+.info {
+  width: 150px;
+  height: 60px;
+  border: 5px solid #111;
+  position: absolute;
+  left: 51%;
+  margin-left: -75px;
+  top: 45%;
+  margin-top: -30px;
+  background-color: darkorange;
+  border-radius: 30px;
+  z-index: 1;
+  text-align: center;
+  line-height: 50px;
+  color: #111;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  display: inline-block;
+}
+
+.pilihan ul {
+  padding-top: 10px;
+  padding-left: 25px;
+}
+
+.pilihan li {
+  display: inline-block;
+  margin: 0 18px;
+}
+
+.pilihan img {
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 5px solid #111;
+  cursor: pointer;
+}
+
+.collapsible {
+  background-color: #111;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+}
+
+.isi {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #222;
+}
+
+.active, .collapsible:hover {
+  background-color: #333;
+}
+
+.orange.tua { background-color: darkorange;}
+.box-opsi {
+    width: 25px;
+    height: 25px;
+    margin: 10px auto;
+}
+.merah {
+    background-color: red;
+}
+.hijau {
+    background-color: green;
+}
+.biru {
+    background-color: blue;
+}

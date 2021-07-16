@@ -1,0 +1,75 @@
+<!-- write your code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Project Akhir Phase Prep - Maulana Yusuf Azmi</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidenav">
+  <h1>MyNote</h1>
+  <a href="#intro" class="intro">Intro</a>
+  <a href="#catatan" class="catatan">Catatan</a>
+  <a href="#game" class="game">Main Yuk</a>
+  <button type="button" class="collapsible">Opsi</button>
+  <div class="isi">
+    <button type="button" id="tombolUbahWarna">Default</button>
+    <br><br>
+    <div class="box-opsi merah"></div>
+    <input type="range" name="sMerah" min="0" max="255">
+    <div class="box-opsi hijau"></div>
+    <input type="range" name="sHijau" min="0" max="255">
+    <div class="box-opsi biru"></div>
+    <input type="range" name="sBiru" min="0" max="255">
+  </div>
+  
+</div>
+
+<!-- <div class="kotak">
+  <div class="modal" id="modal">
+    <div class="close"><span>x</span></div>
+  </div>
+</div> -->
+
+<div class="content" id="intro">
+  <h2>Introduction</h2>
+  <p class="besar">Halo perkenalkan nama saya <b>Maulana Yusuf Azmi</b> , saya tinggal di <u>Brebes</u> . Hobi saya nonton anime, baca manga, gaming dan coding. Saya sedang belajar javascript di Hacktiv8. Semoga kedepanya saya bisa menjadi <strong>fullstack developer</strong> . Motto saya,<span><i>" jangan menyerah sebelum mencoba, jangan mencoba sebelum tahu ilmunya, jadi jangan menyerah sebelum tahu ilmunya wkwkwk "</i></span>  . Semoga di Hacktiv8 saya bisa dapet ilmunya, aamiin. Salam kenal semuanya cukup sekian dan terima kasih.</p>
+</div>
+<div class="content" id="catatan">
+  <h2>Saya sudah belajar</h2>
+</div>
+<div class="content" id="game">
+  <h2>Adu keberuntunganmu melawan komputer</h2>
+  <div class="area-com">
+    <br>
+    <h3>Computer</h3>
+    <img src="img/defaultcom.png" class="img-computer">
+  </div>
+  <div class="info">....</div>
+  <div class="area-player">
+    <br>
+    <h3>Player</h3>
+    <img src="img/default.png" class="img-player">
+  </div>
+  <div class="pilihan">
+    <br>
+    <h3>Pilih jarimu</h3>
+    <ul>
+        <li>
+            <img src="img/gajah.png" class="gajah">
+        </li>
+        <li>
+            <img src="img/orang.png" class="orang">
+        </li>
+        <li>
+            <img src="img/semut.png" class="semut">
+        </li>
+    </ul>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
